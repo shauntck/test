@@ -1,0 +1,102 @@
+Created 27 Nov 2017 
+
+NOW (finish before picking up new projects)
+The input file must be validated
+confirm no duplicate id's
+other validations needed?
+
+Large batches need to process through to completion.
+One Concern project retrospective
+Create Staging Environment
+Remove CD to production for APH (no tests)
+Revisit understanding of "done"/ Jira work flow 
+Determine what testing must be completed for updates to production
+Document all steps requried to launch production environment that are not implicitly document in CF.
+Document CF Release Process (deploying a system template more than once could deploy different versions for those that use a branch).
+SOME DAY (deal with as part of 20% tech debt time)
+System must correctly handle items that repeatedly get sent back to the queue.
+Update logging throughout all projects to be informative and helpful on errors. (ie. log all error)
+Add Output-Aggregator metric and trigger to dev team
+
+SPEX - Test suites should be runnable in Travis
+SPEX - Tests should cover optional inputs
+SPEX - Tests should cover a range of site locations
+SPEX - Tests should cover a range of building heights
+SPEX/SPEX-Task - Determine source of runtime issues
+
+MAYBE (deal with if problem arises)
+Configure APH to run under Node directly rather than through NPM
+Reviews of code for other tech debt issues for each one concern project
+Refactor the generation of the batch id's to use a globally shared NPM package.
+Figure out how we want to handle the globally shared hbrisk uuid namespace???
+Make sure that the system handles parallel batches successfully. (Does this include running small batches quickly in the middle of large ones?)
+Setup local development ENV for, Batch-Watcher, Count-Watcher, Counter, Output-Watcher, Output-Aggregator, Partition-Handler, Batch-Notifier, Analysis-Processing-Hub (APH), SPEX-Task .etc
+
+Normalize lambda projects
+
+CI/CD for lambda project
+CD for Output-Aggregator
+CD for SPEXTask
+Correctly configure CD for staging and production
+
+Write unit tests for all projects.
+Write functional tests for all projects.
+Write smoke tests for all projects.
+Normalize ENV Var naming and usage in all projects.
+Update all projects to use the npm 'config' package for handling configurations.
+Update projects to use a global standard logger package.
+Remove Revision Number from SPEXTask Definition that's passed to APH
+
+Update system to provide performance & health metrics for processes.
+Add Output-Validator to make sure the output formats are valid
+
+SPEXTask - Functional, Integration, and Unit Testing
+SPEXTask - Parse and validate input id only once (in parse message) and cache it for other uses
+SPEXTask - Improve logging (use of levels, details of messages)
+SPEXTask - Make DB_ENDPOINT variable an optional override
+SPEXTask - In calculateResults, trim standard error before checking length
+SPEXTask - Tune retry handling for Queue interactions
+SPEXTask - Additional light refactoring (e.g., replace 'compose' with 'pipe' throughout for readability, replace low-level Dynamo client with document client, refactor composeMain to main()())
+
+Determine strategy for system-level versioning
+
+NEVER (not necessary)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Review of TODOs for each project
+
+test file
